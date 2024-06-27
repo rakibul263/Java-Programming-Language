@@ -1,4 +1,4 @@
-public class Logical_AND {
+public class Logical_OR {
     public static void main(String args[]) {
         // logical and
         System.out.println("Logical AND: ");
