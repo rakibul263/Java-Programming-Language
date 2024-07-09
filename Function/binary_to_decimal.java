@@ -1,5 +1,5 @@
 public class binary_to_decimal {
-    public static void binary_to_decimal(int binaryNumber) {
+    public static void btd(int binaryNumber) {
         int pow = 0;
         int decNum = 0;
         while (binaryNumber > 0) {
@@ -12,6 +12,7 @@ public class binary_to_decimal {
     }
 
     public static void main(String[] args) {
-        binary_to_decimal(111);
+
+        btd(101);
     }
 }

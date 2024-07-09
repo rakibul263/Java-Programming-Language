@@ -14,5 +14,6 @@ public class factorial {
         int number = sc.nextInt();
         int ans = fact(number);
         System.out.println(ans);
+        sc.close();
     }
 }

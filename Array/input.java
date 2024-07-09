@@ -18,5 +18,6 @@ public class input {
         // update math marks
         marks[0] = 100;
         System.out.println("Math: " + marks[0]);
+        sc.close();
     }
 }

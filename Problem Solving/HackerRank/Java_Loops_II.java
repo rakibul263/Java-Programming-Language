@@ -17,5 +17,6 @@ public class Java_Loops_II {
             }
             System.out.println();
         }
+        sc.close();
     }
 }

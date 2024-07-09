@@ -11,6 +11,6 @@ public class Java_Loops_I {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         multi(num);
-
+        sc.close();
     }
 }

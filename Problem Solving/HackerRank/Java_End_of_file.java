@@ -8,5 +8,6 @@ public class Java_End_of_file {
             System.out.println(n + " " + sc.nextLine());
             n++;
         }
+        sc.close();
     }
 }

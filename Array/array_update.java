@@ -15,5 +15,6 @@ public class array_update {
             System.out.print(marks[i] + " ");
         }
         System.out.println();
+        sc.close();
     }
 }

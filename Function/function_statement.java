@@ -13,6 +13,7 @@ public class function_statement {
         int b = sc.nextInt();
 
         System.out.println("sum is: " + sum(a, b));
-
+        sc.close();
+        ;
     }
 }

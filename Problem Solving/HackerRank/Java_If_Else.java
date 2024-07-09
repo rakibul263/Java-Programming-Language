@@ -17,5 +17,6 @@ public class Java_If_Else {
             // odd
             System.out.println("Weird");
         }
+        sc.close();
     }
 }

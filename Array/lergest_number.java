@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class lergest_number {
     public static int getlargest(int number[]) {
         // initilize the largest number

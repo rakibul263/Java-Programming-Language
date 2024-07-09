@@ -24,5 +24,6 @@ public class Binomial_Coefficient {
         int r = sc.nextInt();
         int result = bionomial(n, r);
         System.out.println(result);
+        sc.close();
     }
 }
