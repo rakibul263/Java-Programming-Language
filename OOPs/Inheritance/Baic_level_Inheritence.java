@@ -1,3 +1,5 @@
+package OOPs.Inheritance;
+
 //this is our basic class
 class Shape {
     public void area() {
@@ -12,7 +14,7 @@ class Triangle extends Shape {
     }
 }
 
-public class Inheritence {
+public class Baic_level_Inheritence {
     public static void main(String[] args) {
         // Triangle t1 = new Triangle();
         // t1.area(5, 4);
