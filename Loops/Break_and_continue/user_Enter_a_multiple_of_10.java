@@ -11,5 +11,6 @@ public class user_Enter_a_multiple_of_10 {
             }
             System.out.println(n);
         } while (true);
+        sc.close();
     }
 }

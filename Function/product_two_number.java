@@ -12,6 +12,6 @@ public class product_two_number {
         int b = sc.nextInt();
         int result = multi(a, b);
         System.out.println(result);
-
+        sc.close();
     }
 }
