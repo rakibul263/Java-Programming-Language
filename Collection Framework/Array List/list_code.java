@@ -43,5 +43,9 @@ public class list_code {
 
         System.out.println(increaseIndex.contains(200));
 
+        for (Integer element : increaseIndex) {
+            System.out.println("The element is : " + element);
+        }
+
     }
 }
