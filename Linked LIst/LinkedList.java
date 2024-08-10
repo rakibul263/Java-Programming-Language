@@ -48,6 +48,11 @@ public class LinkedList {
     }
 
     public void addAnyPosition(int index, int data) { // * Time complexity -> O(n) */
+        // base case
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
         Node newNode = new Node(data);
         Node temp = head;
         int i = 0;
