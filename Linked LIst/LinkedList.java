@@ -12,7 +12,7 @@ public class LinkedList {
     public static Node head;
     public static Node tail;
 
-    public void addFirst(int data) {
+    public void addFirst(int data) {// * Time complexity -> O(1) */
         // step-01: create a new node
         Node newNode = new Node(data);
 
@@ -29,7 +29,7 @@ public class LinkedList {
         head = newNode;
     }
 
-    public void addLast(int data) {
+    public void addLast(int data) { // * Time complexity -> O(1) */
         // create a new node
         Node newNode = new Node(data);
 
