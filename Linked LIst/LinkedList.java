@@ -70,6 +70,23 @@ public class LinkedList {
         temp.next = newNode;
     }
 
+    public int removeFirst() {
+        // base case
+        if (size == 0) {
+            System.out.println("Linked list is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0; // update size
+            return val;
+        }
+        int val = head.data;
+        size--; // update size
+        head = head.next;
+        return val;
+    }
+
     public void print() { // * Time complexity -> O(n) */
         // ! base case
         if (head == null) {
@@ -101,5 +118,10 @@ public class LinkedList {
         ll.addAnyPosition(2, 300);
         ll.print();
         System.out.println("Size of this linked list: " + ll.size);
+
+        System.out.println();
+        System.out.println("After remove the first element : ");
+        ll.removeFirst();
+        ll.print();
     }
 }
