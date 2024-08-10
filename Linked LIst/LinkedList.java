@@ -11,10 +11,12 @@ public class LinkedList {
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     public void addFirst(int data) {// * Time complexity -> O(1) */
         // step-01: create a new node
         Node newNode = new Node(data);
+        size++;
 
         // base case
         if (head == null) {
@@ -32,6 +34,7 @@ public class LinkedList {
     public void addLast(int data) { // * Time complexity -> O(1) */
         // create a new node
         Node newNode = new Node(data);
+        size++;
 
         // base case
         if (head == null) {
@@ -54,6 +57,7 @@ public class LinkedList {
             return;
         }
         Node newNode = new Node(data);
+        size++;
         Node temp = head;
         int i = 0;
 
@@ -96,5 +100,6 @@ public class LinkedList {
         System.out.println("After adding the element any of the position: ");
         ll.addAnyPosition(2, 300);
         ll.print();
+        System.out.println("Size of this linked list: " + ll.size);
     }
 }
