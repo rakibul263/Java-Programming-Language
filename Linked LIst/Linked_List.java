@@ -66,12 +66,28 @@ public class Linked_List {
     public int removeLast() {
         int val = tail.data;
         Node temp = head;
+        size--;
         int i = 0;
         while (i < size - 2) {
             temp = temp.next;
         }
         temp.next = null;
         return val;
+    }
+
+    public void removeAnyPosition(int index) {
+        Node temp = head;
+        size--;
+        if (index > size - 1) {
+            System.out.println("Cannot remove your enterd position value : " + temp.next.data);
+            System.out.println("Enter the right position.");
+            return;
+        }
+        int i = 0;
+        while (i < index - 1) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
     }
 
     public void print() {
@@ -88,14 +104,19 @@ public class Linked_List {
         ll.addFirst(2);
         ll.addFirst(1);
         ll.addLast(3);
-        ll.addAnyPosition(100, 100);
+        ll.addAnyPosition(1, 100);
+
+        // ll.print();
+        // // System.out.println(ll.size);
+        // ll.removeFirst();
+        // ll.print();
+
+        // ll.removeLast();
+        // ll.print();
 
         ll.print();
         // System.out.println(ll.size);
-        ll.removeFirst();
-        ll.print();
-
-        ll.removeLast();
+        ll.removeAnyPosition(10);
         ll.print();
 
     }
