@@ -1,4 +1,3 @@
-
 public class MargeSort {
     public static class Node {
         int data;
@@ -13,16 +12,17 @@ public class MargeSort {
     public static Node head;
     public static Node tail;
 
-    public void addLast(int data){
+    public void addFirst(int data) {
         Node newNode = new Node(data);
-        if(head == null){
+        if (head == null) {
             head = tail = newNode;
+            return;
         }
-        tail.next = newNode;
-        tail = newNode;
+        newNode.next = head;
+        head = newNode;
     }
 
-    public Node getMid() {
+    public Node getMid(Node head) {
         Node slow = head;
         Node fast = head.next;
 
@@ -68,7 +68,7 @@ public class MargeSort {
             return head;
         }
         //* find mid
-        Node mid = getMid();
+        Node mid = getMid(head);
 
         //* left & right Marge sort
         Node rightHalf = mid.next;
@@ -91,13 +91,13 @@ public class MargeSort {
 
     public static void main(String[] args) {
         MargeSort ll = new MargeSort();
-        ll.addLast(5);
-        ll.addLast(4);
-        ll.addLast(3);
-        ll.addLast(2);
-        ll.addLast(1);
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ll.addFirst(3);
+        ll.addFirst(4);
+        ll.addFirst(5);
         ll.Print();
-        // ll.head = margeSort(ll.head);
+        ll.head = ll.margeSort(ll.head);
         ll.Print();
     }
 }
