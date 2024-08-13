@@ -66,6 +66,10 @@ public class Doubly_Linked_List {
 
     // ! remove method
     public void removeFirst() {
+        if (head == null) {
+            System.out.println("Doubly linked list empty");
+            return;
+        }
         head = head.next;
         head.next.prev = null;
         size--;
