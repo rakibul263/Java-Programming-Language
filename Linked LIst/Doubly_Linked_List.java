@@ -64,6 +64,35 @@ public class Doubly_Linked_List {
         newNode.prev = temp;
     }
 
+    // ! remove method
+    public void removeFirst() {
+        head = head.next;
+        head.next.prev = null;
+        size--;
+    }
+
+    public void removeLast() {
+        tail = tail.prev;
+        tail.prev.next = null;
+        size--;
+    }
+
+    public void removeAnyPosition(int index) {
+        // * base case
+        if (index == 0) {
+            removeFirst();
+            return;
+        }
+        Node temp = head;
+        int i = 0;
+        while (i < index - 1) {
+            temp = temp.next;
+        }
+        size--;
+        temp.next = temp.next.next;
+        temp.next.next.prev = temp;
+    }
+
     // ! print method
     public void print() {
         Node temp = head;
@@ -81,8 +110,18 @@ public class Doubly_Linked_List {
         ll.addFirst(1);
         ll.addLast(4);
         ll.addLast(5);
-        ll.addAnyPosition(6, 100);
+
+        // ll.addAnyPosition(6, 100);
+        // ll.print();
+        // ll.removeFirst();
+        // ll.print();
+        // ll.removeLast();
+        // ll.print();
+
         ll.print();
+        ll.removeAnyPosition(1);
+        ll.print();
+
         System.out.println("Size: " + ll.size);
     }
 }
