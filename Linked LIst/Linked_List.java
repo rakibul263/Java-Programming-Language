@@ -5,7 +5,7 @@ public class Linked_List {
 
         public Node(int data) {
             this.data = data;
-            this.next = next;
+            this.next = null;
         }
     }
 
