@@ -25,7 +25,9 @@ public class knapsack {
                 capacity -= weight[idx];
             } else {
                 finalValue += (ratio[i][1] * capacity);
+                capacity = 0;
             }
         }
+        System.out.println("Final Value: " + finalValue);
     }
 }
