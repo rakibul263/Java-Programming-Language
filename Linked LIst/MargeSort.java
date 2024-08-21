@@ -33,7 +33,7 @@ public class MargeSort {
         return slow;
     }
 
-   private  Node marge(Node head1, Node head2) {
+    private Node marge(Node head1, Node head2) {
         Node margeLL = new Node(-1);
         Node temp = margeLL;
 
@@ -63,20 +63,20 @@ public class MargeSort {
     }
 
     public Node margeSort(Node head) {
-        //* base case
+        // * base case
         if (head == null || head.next == null) {
             return head;
         }
-        //* find mid
+        // * find mid
         Node mid = getMid(head);
 
-        //* left & right Marge sort
+        // * left & right Marge sort
         Node rightHalf = mid.next;
         mid.next = null;
         Node newLeft = margeSort(head);
         Node newRight = margeSort(rightHalf);
 
-        //* marge
+        // * marge
         return marge(newLeft, newRight);
     }
 
