@@ -6,7 +6,8 @@ public class sum_of_nodes {
 
         public Node(int data) {
             this.data = data;
-            this.left = this.right = null;
+            this.left = null;
+            this.right = null;
         }
     }
 
@@ -26,9 +27,8 @@ public class sum_of_nodes {
         }
 
         public int sum(Node root) {
-            if (root == null) {
+            if (root == null)
                 return 0;
-            }
             int lsum = sum(root.left);
             int rsum = sum(root.right);
             return (lsum + rsum + root.data);
@@ -41,4 +41,5 @@ public class sum_of_nodes {
         Node root = bt.buildTree(nodes);
         System.out.println(bt.sum(root));
     }
+
 }
