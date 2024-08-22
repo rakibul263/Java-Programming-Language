@@ -4,7 +4,7 @@ public class practice_preorder {
         Node left;
         Node right;
 
-        public Node(int data) { // constructor
+        public Node(int data) { // ! constructor
             this.data = data;
             this.left = this.right = null;
         }
