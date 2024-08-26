@@ -139,5 +139,8 @@ public class BST {
         } else {
             System.out.println("NOT FOUND");
         }
+
+        // !print root to leaf
+        rootToLeaf(root, new ArrayList<>());
     }
 }
