@@ -1,4 +1,4 @@
-public class practice_BST {
+public class Build_BST {
     static class Node {
         int data;
         Node left;
@@ -34,11 +34,10 @@ public class practice_BST {
     }
 
     public static void main(String[] args) {
-        int nodes[] = { 1, 2, 6, 4, 5, 3, 7, 8, 9, 10 };
+        int values[] = { 5, 1, 3, 4, 2, 7 };
         Node root = null;
-
-        for (int i = 0; i < nodes.length; i++) {
-            root = insert(root, nodes[i]);
+        for (int i = 0; i < values.length; i++) {
+            root = insert(root, values[i]);
         }
         inorder(root);
         System.out.println();
