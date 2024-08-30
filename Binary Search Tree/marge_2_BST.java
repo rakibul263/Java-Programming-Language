@@ -11,6 +11,12 @@ public class marge_2_BST {
     }
 
     public static void main(String[] args) {
+        Node root1 = new Node(2);
+        root1.left = new Node(1);
+        root1.right = new Node(4);
 
+        Node root2 = new Node(9);
+        root2.left = new Node(3);
+        root2.right = new Node(12);
     }
 }
