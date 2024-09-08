@@ -63,6 +63,15 @@ public class Insert_in_heap {
         }
     }
     public static void main(String[] args) {
+        Heap heap = new Heap();
+        heap.add(3);
+        heap.add(4);
+        heap.add(1);
+        heap.add(5);
 
+        while(!heap.isEmpty()){
+            System.out.println(heap.peek());
+            heap.remove();
+        }
     }
 }
