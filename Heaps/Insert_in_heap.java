@@ -57,6 +57,10 @@ public class Insert_in_heap {
             heapfify(0);
             return data;
         }
+
+        public boolean isEmpty(){
+            return arr.size() == 0;
+        }
     }
     public static void main(String[] args) {
 
